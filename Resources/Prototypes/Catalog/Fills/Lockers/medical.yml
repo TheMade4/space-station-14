@@ -143,7 +143,7 @@
       - id: ClothingMaskSterile
       - id: HandheldGPSBasic
       - id: MedkitFilled
+        prob: 0.3
       - id: OxygenTankFilled
       - id: NitrogenTankFilled
       - id: HandheldCrewMonitor
-        prob: 0.3
