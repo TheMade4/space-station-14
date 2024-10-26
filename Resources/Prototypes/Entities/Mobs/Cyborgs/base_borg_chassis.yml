@@ -72,6 +72,9 @@
   - type: ActivatableUI
     key: enum.BorgUiKey.Key
   - type: SiliconLawBound
+  - type: ActionGrant
+    actions:
+    - ActionViewLaws
   - type: EmagSiliconLaw
     stunTime: 5
   - type: SiliconLawProvider
@@ -82,6 +85,7 @@
   - type: Hands
     showInHands: false
     disableExplosionRecursion: true
+    canBeStripped: false
   - type: ComplexInteraction
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
@@ -106,8 +110,9 @@
       - RoboticsConsole
   - type: WiresPanel
   - type: ActivatableUIRequiresPanel
-  - type: NameIdentifier
-    group: Silicon
+# SS220 Fix AI Dataset
+#  - type: NameIdentifier
+#    group: Silicon
   - type: ContainerContainer
     containers:
       borg_brain: !type:ContainerSlot { }
@@ -118,14 +123,16 @@
     cellSlotId: cell_slot
     fitsInCharger: true
   - type: ItemToggle
+    onActivate: false # You should not be able to turn off a borg temporarily.
     activated: false # gets activated when a mind is added
     onUse: false # no item-borg toggling sorry
-    toggleLight: false
+  - type: ItemTogglePointLight
   - type: AccessToggle
   # TODO: refactor movement to just be based on toggle like speedboots but for the boots themselves
   # TODO: or just have sentient speedboots be fast idk
   - type: PowerCellDraw
     drawRate: 0.6
+  # no ToggleCellDraw since dont want to lose access when power is gone
   - type: ItemSlots
     slots:
       cell_slot:
@@ -234,9 +241,13 @@
     guides:
     - Cyborgs
     - Robotics
-  - type: StepTriggerImmune
   - type: TTS
     randomVoicesList: Borg
+  - type: ProtectedFromStepTriggers
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
 
 - type: entity
   abstract: true
@@ -247,6 +258,7 @@
     deviceNetId: Wireless
     receiveFrequencyId: CyborgControl
     transmitFrequencyId: RoboticsConsole
+    savableAddress: false
   - type: OnUseTimerTrigger
     delay: 10
     examinable: false

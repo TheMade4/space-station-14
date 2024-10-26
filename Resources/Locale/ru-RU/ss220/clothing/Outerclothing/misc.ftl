@@ -6,3 +6,6 @@ ent-ClothingOuterApronBotanistBrown = коричневый фартук
     .suffix = Ботанический
 ent-ClothingOuterHoodieChaplainWhite = белое одеяние священника
     .desc = Белое и строгое одеяние с капюшоном для священника.
+ent-ClothingOuterApronBard = накидка барда
+    .desc = Подчеркивает стиль владельца.
+    .suffix = За время в игре

@@ -96,6 +96,17 @@
   - type: Flammable
     damage:
       types: {}
+  - type: StatusEffects # Overwriting basesimplemob to remove flash, getting flashed as dragon just feelsbad
+    allowed:
+    - SlowedDown
+    - Stutter
+    - Electrocution
+    - ForcedSleep
+    - TemporaryBlindness
+    - Pacified
+    - RadiationProtection
+    - Drowsiness
+    - Adrenaline
   - type: Temperature
     heatDamageThreshold: 800
   - type: Metabolizer
@@ -141,6 +152,19 @@
     - DoorBumpOpener
   - type: ReplacementAccent #SS220 No talking dragons
     accent: genericAggressive
+    # ss220 lowTTKUpdate
+  - type: Damageable
+    damageContainer: Biological
+    damageModifierSet: Dragon
+    ## ss220 lowTTKUpdate
+  - type: Puller
+    needsHands: false
+  # SS220 Telepathy begin
+  - type: Telepathy
+    canSend: true
+    telepathyChannelPrototype: TelepathyChannelSpaceDragon
+  # SS220 Telepathy end
+
 
 - type: entity
   parent: BaseMobDragon
@@ -238,3 +262,4 @@
     priority: 2
     checkCanAccess: false
     range: 0
+    itemIconStyle: BigAction
