@@ -7,6 +7,7 @@
   loadouts:
   - FlowerWreath
   - Hairflower
+  - Headphones
   - PlushieLizard
   - PlushieSpaceLizard
   - Lighter
@@ -28,6 +29,25 @@
   - ClothingNeckTransPin
   - ClothingNeckAutismPin
   - ClothingNeckGoldAutismPin
+  - TowelColorBlack
+  - TowelColorWhite
+  # SS220 Too many towels begin
+#  - TowelColorDarkBlue
+#  - TowelColorDarkGreen
+#  - TowelColorGold
+#  - TowelColorGray
+#  - TowelColorGreen
+#  - TowelColorLightBlue
+#  - TowelColorLightBrown
+#  - TowelColorMaroon
+#  - TowelColorMime
+#  - TowelColorOrange
+#  - TowelColorPurple
+#  - TowelColorRed
+#  - TowelColorSilver
+#  - TowelColorLightBlue
+#  - TowelColorYellow
+  # SS220 Too many towels begin end
   # SS220 Hand/FootWraps begin
   - ClothingHandWraps
   - ClothingFootWraps
@@ -574,6 +594,7 @@
 - type: loadoutGroup
   id: ClownNeck
   name: loadout-group-clown-neck
+  minLimit: 0 #ss220 clown neck fix
   loadouts:
   - ClownPennywiseRuff
 #ss220-loadout-clown-neck-end
@@ -721,6 +742,7 @@
   - QuartermasterFormalSuit
   - QuartermasterJumpsuitCargonovich #SS220-Cargonovich
   - QuartermasterJumpsuitWarehouseman #SS220-QM-Trip
+  - QuartermasterJumpskirtWarehouseman #SS220-QM-Trip
 
 - type: loadoutGroup
   id: QuartermasterNeck
@@ -873,6 +895,8 @@
   id: TechnicalAssistantJumpsuit
   name: loadout-group-technical-assistant-jumpsuit
   loadouts:
+  - TechAssistantJumpsuit #SS220 new assistant uniforms
+  - TechAssistantJumpskirt #SS220 new assistant uniforms
   - YellowJumpsuit
   - YellowJumpskirt
   - TechnicalAssistantJumpsuitTurtleneck #SS220-MoreTurtleneck-Begin
@@ -1000,6 +1024,8 @@
   - ResearchDirectorJumpsuit
   - ResearchDirectorJumpskirt
 #SS220-RD-New-Loadout-begin
+  - ResearchDirectorJumpsuitProfessor #SS220-loadout-academy
+  - ResearchDirectorJumpskirtProfessor #SS220-loadout-academy
   - ClothingUniformJumpsuitRDAlt
 
 - type: loadoutGroup
@@ -1056,6 +1082,8 @@
   - ScientistJumpsuitTurtleneckAlt
   - ScientistJumpskirtTurtleneck
   - ScientistJumpskirtTurtleneckAlt #SS220-MoreTurtleneck-End
+  - ScientistJumpsuitPhdCandidate #SS220-loadout-academy
+  - ScientistJumpskirtPhdCandidate #SS220-loadout-academy
 
 - type: loadoutGroup
   id: ScientistBackpack
@@ -1106,8 +1134,12 @@
   id: ResearchAssistantJumpsuit
   name: loadout-group-research-assistant-jumpsuit
   loadouts:
+  - ResearchAssistantJumpsuit #SS220 new assistant uniforms
+  - ResearchAssistantJumpskirt #SS220 new assistant uniforms
   - WhiteJumpsuit
   - WhiteJumpskirt
+  - ResearchAssistantBachelor #SS220-loadout-academy
+  - ResearchAssistantBachelorSkirt #SS220-loadout-academy
   - ResearchAssistantJumpsuitTurtleneck #SS220-MoreTurtleneck-Begin
   - ResearchAssistantJumpsuitTurtleneckAlt
   - ResearchAssistantJumpskirtTurtleneck
@@ -1296,7 +1328,6 @@
 - type: loadoutGroup
   id: DetectiveOuterClothing
   name: loadout-group-detective-outerclothing
-  minLimit: 0
   loadouts:
   - DetectiveArmorVest
   - DetectiveCoat
@@ -1350,6 +1381,8 @@
   - ChiefMedicalOfficerJumpskirt
   - ChiefMedicalOfficerTurtleneckJumpsuit
   - ChiefMedicalOfficerTurtleneckJumpskirt
+  - CMOCorpJumpsuit #SS220-CMOCorporate
+  - CMOCorpJumpskirt #SS220-CMOCorporate
 
 - type: loadoutGroup
   id: ChiefMedicalOfficerOuterClothing
@@ -1455,6 +1488,8 @@
   id: MedicalInternJumpsuit
   name: loadout-group-medical-intern-jumpsuit
   loadouts:
+  - InternJumpsuit #SS220 new assistant uniforms
+  - InternJumpskirt #SS220 new assistant uniforms
   - WhiteJumpsuit
   - WhiteJumpskirt
   - MedicalInternJumpsuitTurtleneck #SS220-MoreTurtleneck-Begin
@@ -1495,6 +1530,7 @@
   minLimit: 0
   loadouts:
   - ParamedicHead
+  - ParamedInterdyneSoft #ss220-ParamedInterdyne
 
 - type: loadoutGroup
   id: ParamedicJumpsuit
@@ -1505,6 +1541,7 @@
   - ParamedicJumpsuitTurtleneck #SS220-MoreTurtleneck-Begin
   - ParamedicJumpskirtTurtleneck #SS220-MoreTurtleneck-End
   - ParamedicFeldsher #SS220-ParamedFashion
+  - ParamedInterdyneJumpsuit #ss220-ParamedInterdyne
 
 - type: loadoutGroup
   id: ParamedicOuterClothing
